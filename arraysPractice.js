@@ -57,13 +57,6 @@ const evenFinder = function(arr){
   return evens;
 }
 
-
-
-
-  
-
-
-
 // =============================================
 // =============================================
 // EXTRA PRACTICE PROBLEMS BELOW
@@ -71,35 +64,50 @@ const evenFinder = function(arr){
 // =============================================
 
 
-
-
-
-
-//Next problem
-
-
 var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 //Write a function called divider that is given one argument, numbersArray.
-//Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
+//Have divider return an Array with the first item in the array being the evens array 
+//(all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
 
+const divider = function(arr){
+    const evens = [];
+    const odds = [];
 
-
-  //Code Here
-
+    arr.forEach(function(item){
+      if(item % 2 === 0){
+        evens.push(item);
+      } else {
+        odds.push(item);
+      }
+    })
+    return [evens, odds];
+}
 
 //Next Problem
-
 
 var getRandomArbitrary = function() {
   return Math.floor(Math.random() * 30);
 };
 // var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
-//Above you're given a function that will return a random number between 0 and 30.  There is also a commented out array full of numbers to help you visualize what your function will be receiving.
+//Above you're given a function that will return a random number between 0 and 30.  
+//There is also a commented out array full of numbers to help you visualize what your function will be receiving.
 
-// Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. If it is, return true, if it's not, return false
+// Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), 
+//then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. 
+//If it is, return true, if it's not, return false
 
   //Code Here
+const finder = function(arr){
+  var rando = getRandomArbitrary();
+    for( var  i = 0; i < arr.length; i++){
+      if(arr[i] === rando){
+        return true;
+      } 
+    }
+    return false;
+}  
 
+//  return array.includes(rando);
 
 
 
@@ -115,6 +123,9 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   second is an item to remove from myGroceryList. If the second argument (or the item to add or remove) matches an item in myGroceryList,
   remove that item from the your grocery list and return the new, updated grocery list.
 
+
+
+
   Once you do that, write another function called addItem that is given two arguments, the first is myGroceryList
   and the second is an item to add to your grocery list. In addItem add the item you passed in to
   myGroceryList then return the new, updated grocery list.
@@ -123,6 +134,20 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
   //Code Here
+
+// const removeItem = function(myGroceryList, item){
+//   for(var i = 0; i < myGroceryList.length; i++){
+//     if(myGroceryList[i] === item){
+//       myGroceryList.splice(i, 1);
+//     }
+//   }
+//   return myGroceryList;
+// }
+
+// const addItem = function(myGroceryList, item){
+//   myGroceryList.push(item);
+//   return myGroceryList;
+// }
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
