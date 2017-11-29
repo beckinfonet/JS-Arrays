@@ -197,7 +197,24 @@ for(var i = 0; i < num2; i++){
 //Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
 
   //Code Here
+const longer = function(arr1, arr2){
+  if(arr1.length > arr2.length){
+    return arr1;
+  }
+    return arr2;
+}
 
+const both = function(arr1, arr2){
+    const newArray = [];
+    for( var i = 0; i < arr1.length; i++){
+      for( var k = 0; k < arr2.length; k++){
+        if( arr1[i] === arr2[k]){
+          newArray.push(arr1[i]);
+        }
+      }
+    }
+    return newArray;
+}
 
 /*
 As a continuation of the previous problem, write another function called 'both'.
@@ -251,11 +268,20 @@ sure that it's equal to 4. */
 
   //Code Here
 
+devMountainEmployees.push(tyler, cahlan, ryan, colt);
+console.log(devMountainEmployees.length);  
+
+
+
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
   //Code Here
-
+for( var i = 0; i < devMountainEmployees.length; i++){
+  if(devMountainEmployees[i] === cahlan){
+    devMountainEmployees.splice(i, 1);
+  }
+}
 
 
 
@@ -269,6 +295,8 @@ of Data is to have an Array full of objects. */
 
   //Code Here
 
+const users = [];
+
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
 
@@ -280,7 +308,26 @@ var user1 = {
     username: 'infiniateLoop'
 };
 
+var user2 = {
+  name: 'James Bond',
+  email: 'jb@gmail.com',
+  password: 'iLoveJavaScript',
+  username: 'infiniateLoop'
+};
+var user3 = {
+  name: 'Dan Cohen',
+  email: 'dc@gmail.com',
+  password: 'iLoveJavaScript',
+  username: 'infiniateLoop'
+};
+var user4 = {
+  name: 'Jon Snow',
+  email: 'js@gmail.com',
+  password: 'iLoveJavaScript',
+  username: 'infiniateLoop'
+};
 //Your Code Here
+users[user1, user2, user3, user4]
 
 /*Now you have a very common data structure. Twitter is a good use case.
 It's easy to imagine that your followers list on Twitter is an Array full or objects
@@ -291,5 +338,9 @@ objects until you find Tyler's account (use tylermcginnis33@gmail.com to find hi
 Once you find the particular index he's located in, delete him from the array.*/
 
   //Code Here
-
+for ( var i = 0; i < users.length; i++){
+  if(users[i].email === 'tylermcginnis33@gmail.com'){
+    delete users[i];
+  }
+}
 //The activity we just did is very much how data works in 'the real world'.
