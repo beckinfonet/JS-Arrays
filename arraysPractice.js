@@ -135,19 +135,19 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
   //Code Here
 
-// const removeItem = function(myGroceryList, item){
-//   for(var i = 0; i < myGroceryList.length; i++){
-//     if(myGroceryList[i] === item){
-//       myGroceryList.splice(i, 1);
-//     }
-//   }
-//   return myGroceryList;
-// }
+const removeItem = function(myGroceryList, item){
+  for(var i = 0; i < myGroceryList.length; i++){
+    if(myGroceryList[i] === item){
+      myGroceryList.splice(i, 1);
+    }
+  }
+  return myGroceryList;
+}
 
-// const addItem = function(myGroceryList, item){
-//   myGroceryList.push(item);
-//   return myGroceryList;
-// }
+const addItem = function(myGroceryList, item){
+  myGroceryList.push(item);
+  return myGroceryList;
+}
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
@@ -156,13 +156,15 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Next Problem
 
-
-
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
-  //Code Here
-
-
+ const maker = function(){
+   const temp = [];
+   for( var i = 1; i <= 215; i++){
+     temp.push(i);
+   }
+   return temp;
+ }
 
 //Next Problem
 
@@ -171,13 +173,15 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //Write a function called addTen that is given 'numbers' as it's only argument and returns a new
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
-  //Code Here
-
-
+const addTen = function(arr){
+  const modifiedArray = [];
+  for( var i = 0; i < arr.length; i++){
+    modifiedArray.push(parseInt(arr[i], 10) + 10);
+  }
+  return modifiedArray;
+}
 
 //Next Problem
-
-
 
 var num1 = Math.floor(Math.random() * 30);
 var num2 = Math.floor(Math.random() * 30);
